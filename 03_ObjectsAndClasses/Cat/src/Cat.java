@@ -13,7 +13,6 @@ public class Cat
     static int count;
     private boolean flag;
 
-
     public Cat()
     {
         weight = 1500.0 + 3000.0 * Math.random();
