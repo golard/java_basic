@@ -5,13 +5,16 @@ public class Cat
     public static final int  COUNT_EYES = 2;
     public static final double  MAX_WEIGHT = 10000.0;
     public static final double  MIN_WEIGHT = 1000.0;
+    private static final Cat cat5 = ;
     private double originWeight;
-    public double weight;
+    //public double weight;
     private double minWeight;
     private double maxWeight;
+    private double weight = 1100.0;
     public double totalFoodWeight;
     static int count;
     private boolean flag;
+    public double getKitten = 1100.0;
 
     public Cat()
     {
@@ -23,6 +26,18 @@ public class Cat
         //pee = 100.0;
         flag = true;
         count++;
+    }
+
+    public double getGetKitten()        //задание 3.5
+    {
+        return getKitten;
+    }
+
+    public static Cat(Cat cat)         //Задание 3.5
+    {
+        Cat cat3 = new Cat();           //создаем нового кота
+        cat5.weight= cat5.getWeight();  
+        return cat5;
     }
 
     public void meow()

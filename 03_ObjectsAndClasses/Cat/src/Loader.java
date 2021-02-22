@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Loader
 {
     public static void main(String[] args) {
-/*        Cat cat = new Cat();
+/*      Cat cat = new Cat();
         Cat cat1 = new Cat();
         Cat cat2 = new Cat();
         Cat cat3 = new Cat();
@@ -33,8 +33,7 @@ public class Loader
             cat.meow();
         }
         System.out.println(cat.getStatus());*/
-
-     /*   System.out.println("Вторая кошка: " + cat1.getWeight());
+        /*   System.out.println("Вторая кошка: " + cat1.getWeight());
 
         cat1.feed(150.0);
 
@@ -65,13 +64,24 @@ public class Loader
         Cat cat3 = new Cat();
         Cat cat4 = new Cat();
         System.out.println(Cat.getCount());
-        cat.feed(5.0);
-        cat.feed(5.0);
-        cat.feed(9000.0);
-        cat.feed(9000.0);
+        cat1.feed(5.0);
+        cat2.feed(5.0);
+        cat3.feed(9000.0);
+        cat4.feed(9000.0);
         System.out.println("Осталось живых кошек : " + Cat.getCount());
         System.out.println("У кошки " + Cat.COUNT_EYES + " глазa");
 
 
+
+        private static Cat getKitten (double weight)  //задание 3.5
+        {
+            Cat cat7 = new Cat();           //Создаем 3 объекта
+            Cat cat8 = new Cat();
+            Cat cat9 = new Cat();
+
+            return cat7;
+            return cat8;
+            return cat9;
+        }
     }
 }
