@@ -82,6 +82,7 @@ public class Loader
             return cat7;
             return cat8;
             return cat9;
+            //проверка гитлаба
         }
     }
 }
