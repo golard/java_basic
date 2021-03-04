@@ -1,11 +1,7 @@
-public enum Color
-{
-    GREY,
-    BLUE,
-    RED,
-    BLACK,
-    WHITE
-
-
+public enum CatColor {
+    Black,
+    Brown,
+    Gray,
+    White
 
 }

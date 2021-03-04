@@ -1,88 +1,32 @@
-import java.net.SocketOption;
-import java.sql.SQLOutput;
-import java.util.Arrays;
+import com.skillbox.airport.Airport;
 
 public class Loader
 {
-    public static void main(String[] args) {
-/*      Cat cat = new Cat();
-        Cat cat1 = new Cat();
-        Cat cat2 = new Cat();
-        Cat cat3 = new Cat();
-        Cat cat4 = new Cat();*/
+    public static void main(String[] args)// урок 3.5
+    {
+       /* Cat murzik = getKitty(1500.0 + 3000.0 * Math.random());
+        murzik.setColor(CatColor.Black);//Урок 3.6
+        System.out.println("Родился котенок с весом "+murzik.getWeight()+" и цветом: "+murzik.getColor());*/
 
-/*      System.out.println("Первая кошка: " + cat.getWeight());
-        System.out.println("Вторая кошка: " + cat1.getWeight());
-        System.out.println("Третья кошка: " + cat2.getWeight());
-        System.out.println("Четвертая кошка: " + cat3.getWeight());
-        System.out.println("Пятая кошка: " + cat4.getWeight());
-
-        cat.feed(100.0);
-        System.out.println("Вес первой кошки: " + cat.getWeight());
-
-        cat2.feed(100.0);
-        System.out.println("Вес второй кошки: " + cat2.getWeight());*/
-
-
-/*      while (!cat.getStatus().equals("Exploded") ) {
-            cat.feed(100.00);
-        }
-        System.out.println(cat.getStatus());
-
-        while (!cat.getStatus().equals("Dead") ) {
-            cat.meow();
-        }
-        System.out.println(cat.getStatus());*/
-        /*   System.out.println("Вторая кошка: " + cat1.getWeight());
-
-        cat1.feed(150.0);
-
-        System.out.println("Вторая кошка съела "                    + cat1.getTotalFoodWeight() + " грамм корма.");
-        System.out.println("Вторая кошка поела и теперь ее вес "    + cat1.getWeight() + " грамм");
-
-        cat1.feed(100.0);
-
-        System.out.println("Вторая кошка съела "                    + cat1.getTotalFoodWeight() + " грамм корма.");
-        System.out.println("Вторая кошка поела и теперь ее вес "    + cat1.getWeight() + " грамм.");
-
-        cat1.pee();
-        System.out.println("Вес составляет " + cat1.getWeight()     + " грамм.");*/
-
-/*        System.out.println("Первая кошка: " + cat.getWeight());
-        System.out.println("Вторая кошка: " + cat1.getWeight());
-        System.out.println("Третья кошка: " + cat2.getWeight());
-        cat1.feed(9000.0);
-        System.out.println("Вторая кошка: " + cat1.getStatus());
-        System.out.println("Всего осталось кошек: " + cat.getCount());
-        cat.feed(9000.0);
-        System.out.println("Первая кошка: " + cat.getStatus());
-        System.out.println("Всего осталось кошек: " + cat.getCount());*/
-
-        Cat cat = new Cat();
-        Cat cat1 = new Cat();
-        Cat cat2 = new Cat();
-        Cat cat3 = new Cat();
-        Cat cat4 = new Cat();
-        System.out.println(Cat.getCount());
-        cat1.feed(5.0);
-        cat2.feed(5.0);
-        cat3.feed(9000.0);
-        cat4.feed(9000.0);
-        System.out.println("Осталось живых кошек : " + Cat.getCount());
-        System.out.println("У кошки " + Cat.COUNT_EYES + " глазa");
+        Cat m = new Cat();
+        System.out.println(Cat.сount);
+        System.out.println(m.getWeight());
+        m.feed(20000.);
+        Cat cat2 = Cat.makeTwin(m);
+        System.out.println(Cat.сount);
+        System.out.println(m.getWeight());
+        System.out.println(cat2.getWeight());
+        cat2.feed(20000.);
+        System.out.println(Cat.сount);
 
 
 
-        private static Cat getKitten (double weight)  //задание 3.5
-        {
-            Cat cat7 = new Cat();           //Создаем 3 объекта
-            Cat cat8 = new Cat();
-            Cat cat9 = new Cat();
-
-            return cat7;
-            return cat8;
-            return cat9;
-            //проверка гитлаба
-        }
+        Airport airport = Airport.getInstance();
+        System.out.println(airport.getAllAircrafts());
     }
+    public static Cat getKitty(double weigth){// урок 3.5
+        Cat cat = new Cat();
+        return cat;
+    }
+
 }
