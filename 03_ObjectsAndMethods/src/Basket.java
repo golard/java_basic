@@ -4,6 +4,7 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
+    private int totalItemsWeight = 0;
 
     public Basket() {
         increaseCount(1);
@@ -11,7 +12,7 @@ public class Basket {
         this.limit = 1000000;
     }
 
-    public Basket(int limit) {//5465
+    public Basket(int limit) {
         this();
         this.limit = limit;
     }
@@ -20,6 +21,7 @@ public class Basket {
         this();
         this.items = this.items + items;
         this.totalPrice = totalPrice;
+        this.totalItemsWeight = totalItemsWeight;//task 1
     }
 
     public static int getCount() {
@@ -30,11 +32,20 @@ public class Basket {
         Basket.count = Basket.count + count;
     }
 
-    public void add(String name, int price) {
+    //task 1 with 2 new add methodes
+    public  void add(String name, int price, double weight) {
+        add(name, price, weight);
+    }
+
+    public void add(String name, int price, int count, double weigth) {
+        add(name, price, count, weigth);
+    }
+
+    public void add(String name, int price) {//methode for adding 1 item
         add(name, price, 1);
     }
 
-    public void add(String name, int price, int count) {
+    public void add(String name, int price, int count) {//methode for adding many items
         boolean error = false;
         if (contains(name)) {
             error = true;
