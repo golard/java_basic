@@ -1,8 +1,8 @@
  public class Arithmetic
 {
 
-    int number1 = 0;
-    int number2 = 0;
+    int number1 = 2;
+    int number2 = 5;
     int summ;
     int multi;
     int average;
