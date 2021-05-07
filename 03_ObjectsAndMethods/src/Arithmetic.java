@@ -16,13 +16,13 @@
     }
 
     //addition
-    public int summ(int number1, int number2) {
+    public int summ() {
        summ = number1 + number2;
        return summ;
     }
 
     //difference with a result > 0
-    public int dif(int number1, int number2) {
+    public int dif() {
         if(number1 > number2) {
             substractionNumber1 = number1 - number2;
             return substractionNumber1;
@@ -34,19 +34,19 @@
     }
 
     //multiplication
-    public int multi (int number1, int number2) {
+    public int multi () {
         multi = number1 * number2;
         return multi;
     }
 
     //average number
-    public int average (int number1, int number2) {
+    public int average () {
         average = (number1 * number2) / 2;
         return average;
     }
 
     //max number
-    public int max (int number1, int number2) {
+    public int max () {
         if(number1 > number2) {
             return number1;
         }
@@ -56,7 +56,7 @@
     }
 
     //min number
-    public int min (int number1, int number2) {
+    public int min () {
         if(number1 < number1) {
             return number1;
         }
