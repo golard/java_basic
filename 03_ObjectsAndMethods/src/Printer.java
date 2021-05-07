@@ -1,24 +1,24 @@
 public class Printer {
     String queue = "";
-    String textDoc;
-    String nameDoc;
+    String textDoc = "The new text in the document";
+    String nameDoc = "New document";
     int pageCount;
     int documentsCount;
-    int printDocumentsCount;
+    int getPrintDocumentCount;
 
-    //Methode with only doc text
+
     public void append(String textDoc) {
-        append(textDoc);
+        append(textDoc, "Платежи", 5);
+
     }
 
-    //Methode with doc text and name text
     public void append(String textDoc, String nameDoc) {
-        append(textDoc, nameDoc);
+        append(textDoc, "Переводы", 9);
     }
 
-    //Methode with doc text, name text and page count
+
     public void append(String textDoc, String nameDoc, int pageCount) {
-        append(textDoc, nameDoc, pageCount);
+        append("Document", "Отчеты");
     }
 
     public void clear() {
@@ -27,9 +27,9 @@ public class Printer {
 
     public void print () {
         System.out.println("Текс документа: " + textDoc + "\n"
-                + "Имя документа: " + nameDoc + "\n"
-                + "Количество страниц: " + pageCount);
-        queue = "";
+                + "Количество страниц: " + pageCount
+                + "Количество документов: " + documentsCount);
+        clear();
     }
 
     public int getPageCount() {
@@ -40,7 +40,7 @@ public class Printer {
         return documentsCount;
     }
 
-    public int getPrintDocumentsCount() {
-        return  printDocumentsCount;
+    public static int getPrintDocumentsCount()  {
+        return  getPrintDocumentsCount();
     }
 }
