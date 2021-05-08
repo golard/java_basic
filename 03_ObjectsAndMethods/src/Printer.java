@@ -28,10 +28,15 @@ public class Printer {
     }
 
     public void print () {
+
         System.out.println("Текс документа: " + textDoc + "\n"
                 + "Количество страниц: " + pageCount
                 + "Количество документов: " + documentsCount);
         clear();
+        //так не работает:
+        //System.out.println(Printer.append("Текск документа1" , "Название документа1"));
+        //c return тоже не работает, так как void есть.
+
     }
 
     public int getPageCount() {
