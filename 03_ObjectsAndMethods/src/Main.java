@@ -18,9 +18,11 @@ public class Main {
          */
 
         Printer printer1 = new Printer();
-        //System.out.println(printer1.append()); //Работать не будет, потому что нет параметра у append
-        //System.out.println(printer1.append(printer1.textDoc, printer1.nameDoc)); так тоже не работает, а почему?
-        //
-        //System.out.println(printer1.append("Document", "Переводы")); //Почему так тоже не работает?
+
+        printer1.append("Первый текст документа", "Это первое имя документа");
+        printer1.append("Второй текст документа", "Это второе имя документа");
+        printer1.append("Третий текст документа", "Это третье имя документа");
+
+        printer1.print();
     }
 }

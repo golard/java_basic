@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Printer {
     String queue = "";
     String textDoc = "The new text in the document";
