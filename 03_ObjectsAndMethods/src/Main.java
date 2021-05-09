@@ -6,16 +6,19 @@ public class Main {
         basket.print("Milk");
 
         //create the object and test arithmetics methodes
-        Arithmetic arithmetic= new Arithmetic();
+        //Arithmetic arithmetic= new Arithmetic(int number1, int number2);
+        Arithmetic arithmetic= new Arithmetic(10, 5);
 
-        /*testing arithmetics methodes
+
+
+        //testing arithmetics methodes
         System.out.println(arithmetic.summ());
         System.out.println(arithmetic.dif());
         System.out.println(arithmetic.multi());
         System.out.println(arithmetic.average());
         System.out.println(arithmetic.max());
         System.out.println(arithmetic.min());
-         */
+
 
         Printer printer1 = new Printer();
 
