@@ -8,19 +8,17 @@ public class Printer {
     int documentsCount;
     int getPrintDocumentCount;
 
-
     public void append(String textDoc) {
         append(textDoc, "Платежи", 5);
-
     }
 
     public void append(String textDoc, String nameDoc) {
         append(textDoc, "Переводы", 9);
     }
 
-
     public void append(String textDoc, String nameDoc, int pageCount) {
-        append("Document", "Отчеты");
+        queue = queue + "Имя документа:" + nameDoc + "Текст документа:" + textDoc + "Количество страниц:" + pageCount + "\n";
+        getPrintDocumentCount = getPrintDocumentCount + pageCount;
     }
 
     public void clear() {
@@ -28,15 +26,8 @@ public class Printer {
     }
 
     public void print () {
-
-        System.out.println("Текс документа: " + textDoc + "\n"
-                + "Количество страниц: " + pageCount
-                + "Количество документов: " + documentsCount);
+        System.out.printf(queue);
         clear();
-        //так не работает:
-        //System.out.println(Printer.append("Текск документа1" , "Название документа1"));
-        //c return тоже не работает, так как void есть.
-
     }
 
     public int getPageCount() {
