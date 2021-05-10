@@ -6,27 +6,29 @@ public class Printer {
     String nameDoc = "New document";
     int pageCount;
     int documentsCount;
-    int getPrintDocumentCount;
+    int countPrintDocument;
+    int printDocumentCount;
 
     public void append(String textDoc) {
-        append(textDoc, "Платежи", 5);
+        append(textDoc, "Платежи", 1);
     }
 
     public void append(String textDoc, String nameDoc) {
-        append(textDoc, "Переводы", 9);
+        append(textDoc, "Переводы", 2);
     }
 
     public void append(String textDoc, String nameDoc, int pageCount) {
-        queue = queue + "Имя документа:" + nameDoc + "Текст документа:" + textDoc + "Количество страниц:" + pageCount + "\n";
-        getPrintDocumentCount = getPrintDocumentCount + pageCount;
+        queue = queue + "Имя документа: " + nameDoc + "Текст документа: " + textDoc + "Количество страниц: " + pageCount + "\n";
+        countPrintDocument = countPrintDocument + pageCount;
     }
 
     public void clear() {
         queue = "";
+        pageCount = 0;
     }
 
     public void print () {
-        System.out.printf(queue);
+        System.out.println(queue);
         clear();
     }
 
@@ -38,7 +40,7 @@ public class Printer {
         return documentsCount;
     }
 
-    public static int getPrintDocumentsCount()  {
-        return  getPrintDocumentsCount();
+    public  int getPrintDocumentCount()  {
+        return printDocumentCount;
     }
 }
