@@ -2,23 +2,23 @@ import java.sql.SQLOutput;
 
 public class Printer {
     String queue = "";
-    String textDoc = "The new text in the document";
-    String nameDoc = "New document";
+    String textDoc;
+    String nameDoc;
     int pageCount;
     int documentsCount;
     int countPrintDocument;
     int printDocumentCount;
 
     public void append(String textDoc) {
-        append(textDoc, "Платежи", 1);
+        append("");
     }
 
     public void append(String textDoc, String nameDoc) {
-        append(textDoc, "Переводы", 2);
+        append(textDoc, nameDoc, 2);
     }
 
     public void append(String textDoc, String nameDoc, int pageCount) {
-        queue = queue + "Имя документа: " + nameDoc + "Текст документа: " + textDoc + "Количество страниц: " + pageCount + "\n";
+        queue = queue + "Имя документа: " + nameDoc + " Текст документа: " + textDoc + " Количество страниц: " + pageCount + "\n";
         countPrintDocument = countPrintDocument + pageCount;
     }
 
