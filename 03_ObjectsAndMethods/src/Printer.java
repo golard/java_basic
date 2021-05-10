@@ -2,15 +2,13 @@ import java.sql.SQLOutput;
 
 public class Printer {
     String queue = "";
-    String textDoc;
-    String nameDoc;
     int pageCount;
     int documentsCount;
     int countPrintDocument;
     int printDocumentCount;
 
     public void append(String textDoc) {
-        append("");
+        append(textDoc,"Это конец, можно выходить в окно!!!11111" , 666);
     }
 
     public void append(String textDoc, String nameDoc) {
