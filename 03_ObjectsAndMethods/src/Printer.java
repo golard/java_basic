@@ -33,11 +33,17 @@ public class Printer {
             return;
         }
         System.out.println(queue);
-        countPrintedPages = countPageInQueue;
-        countPrintedDocs = countDocsInQueue;
+
 
         System.out.println("Количество всего напечатанных документов: " + countPrintedDocs);
         System.out.println("Количество всего напечатанных страниц: " + countPrintedPages);
+
+        countPrintedPages = countPageInQueue + countPrintedPages;
+        countPrintedDocs = countDocsInQueue + countPrintedDocs;
+
+        System.out.println("Всего страниц напечатано: " + countPrintedPages);
+        System.out.println("Всего документов напечатано: " + countPrintedDocs);
+
         clear();
     }
 

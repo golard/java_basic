@@ -28,5 +28,9 @@ public class Main {
         printer1.append("Четвертый текст документа, ");
 
         printer1.print();
+
+        printer1.append("Пятый текст документа, ", "Это пятое имя теста, ");
+        System.out.println("");
+        printer1.print();
     }
 }
