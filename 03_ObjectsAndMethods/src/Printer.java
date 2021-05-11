@@ -1,44 +1,55 @@
-import java.sql.SQLOutput;
-
 public class Printer {
     String queue = "";
-    int pageCount;
-    int documentsCount;
-    int countPrintDocument;
-    int printDocumentCount;
+
+    int countPageInQueue;
+    int countDocsInQueue;
+
+    int countPrintedPages;
+    int countPrintedDocs;
 
     public void append(String textDoc) {
-        append(textDoc,"Это конец, можно выходить в окно!!!11111" , 666);
+        append(textDoc, "Без имени, ");
     }
 
     public void append(String textDoc, String nameDoc) {
-        append(textDoc, nameDoc, 2);
+        append(textDoc, nameDoc, 1);
     }
 
     public void append(String textDoc, String nameDoc, int pageCount) {
         queue = queue + "Имя документа: " + nameDoc + " Текст документа: " + textDoc + " Количество страниц: " + pageCount + "\n";
-        countPrintDocument = countPrintDocument + pageCount;
+        countPageInQueue = countPageInQueue + pageCount;
+        countDocsInQueue = countDocsInQueue + 1;
     }
 
     public void clear() {
         queue = "";
-        pageCount = 0;
+        countPageInQueue = 0;
+        countDocsInQueue = 0;
     }
 
     public void print () {
+        if(queue.equals("")) {
+            System.out.println("Queue is empty!");
+            return;
+        }
         System.out.println(queue);
+        countPrintedPages = countPageInQueue;
+        countPrintedDocs = countDocsInQueue;
+
+        System.out.println("Количество всего напечатанных документов: " + countPrintedDocs);
+        System.out.println("Количество всего напечатанных страниц: " + countPrintedPages);
         clear();
     }
 
     public int getPageCount() {
-        return pageCount;
+        return countPrintedPages;
     }
 
-    public int getDocumentsCount() {
-        return documentsCount;
+    public int getCountPrintedDocs() {
+        return countPrintedDocs;
     }
 
-    public  int getPrintDocumentCount()  {
-        return printDocumentCount;
+    public  int getCountDocsInQueue()  {
+        return countDocsInQueue;
     }
 }

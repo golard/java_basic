@@ -6,10 +6,7 @@ public class Main {
         basket.print("Milk");
 
         //create the object and test arithmetics methodes
-        //Arithmetic arithmetic= new Arithmetic(int number1, int number2);
         Arithmetic arithmetic= new Arithmetic(10, 5);
-
-
 
         //testing arithmetics methodes
         System.out.println(arithmetic.summ());
@@ -19,13 +16,16 @@ public class Main {
         System.out.println(arithmetic.max());
         System.out.println(arithmetic.min());
 
-
         Printer printer1 = new Printer();
+        //количество документов в очереди перед печатью
+        System.out.println("Количество документов в очереди: " + printer1.countDocsInQueue);
+        System.out.println("Количество страниц в очереди на печать: " + printer1.countPageInQueue);
+        System.out.println("");
 
-        printer1.append("Первый текст документа");
-        printer1.append("Второй текст документа", "Это второе имя документа", 666);
-        printer1.append("Это третье имя документа");
-        printer1.append("Просто вызывайте скорую, нужен психиатр");
+        printer1.append("Первый текст документа, ", "Без имени, ");
+        printer1.append("Второй текст документа, ", "Это второе имя документа, ", 1);
+        printer1.append("Третий текст документа, ", "Это третье имя теста, ");
+        printer1.append("Четвертый текст документа, ");
 
         printer1.print();
     }
