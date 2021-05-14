@@ -1,4 +1,6 @@
- public class Arithmetic
+package src;
+
+public class Arithmetic
 {
     int number1 = 10;
     int number2 = 5;
